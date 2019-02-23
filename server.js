@@ -23,12 +23,6 @@ app.use((req, res, next) => {
   next();
 })
 
-// app.use((req, res, next) => {
-//   res.render('maintanance.hbs', {
-    
-//   })
-// })
-
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
 });
@@ -40,6 +34,13 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home page',
+    welcomeMessage: 'This is Home page!'
+  })
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
     welcomeMessage: 'This is Home page!'
   })
 });
