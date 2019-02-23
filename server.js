@@ -23,11 +23,11 @@ app.use((req, res, next) => {
   next();
 })
 
-app.use((req, res, next) => {
-  res.render('maintanance.hbs', {
+// app.use((req, res, next) => {
+//   res.render('maintanance.hbs', {
     
-  })
-})
+//   })
+// })
 
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
